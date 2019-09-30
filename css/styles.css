@@ -1,0 +1,115 @@
+
+body{
+    height: 100px;
+    background-color: darkgoldenrod;
+    text-align: center;
+    font-family: Arial, Helvetica, san-serif;
+    font-size: 20px;
+    margin: 1px;
+}
+h1{
+    color: darkblue;
+    position: relative;
+    width: 50%;
+    padding: .5rem;
+    font-weight: bold;
+    border-radius: 30px;
+    background-color: #414141;
+}
+h2{
+    height:170px;
+}
+#EAGLE{
+    height:150px;
+    width:225px;
+}
+#BIRDYSUN{
+    height:150px;
+    width:225px;
+}
+#bannerimg{
+    height: 200px;
+    width:900px;
+    background-color: black;
+}
+.navbar {
+    width: 100vw;
+    background-color: black;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Navigation links */
+.navbar a {
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    width: 16.6%;
+    /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center;
+}
+
+/* Add a background color on mouse-over */
+.navbar a:hover {
+    background-color: red;
+}
+
+/* Style the current/active link */
+.navbar a:active {
+    background-color: #4CAF50;
+}
+
+#bannerimg {
+    width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 24pt;
+    color: yellow;
+}
+
+li {
+    list-style-position: inside;
+}
+
+.pic {
+    position: absolute;
+    width: 20%;
+    margin: 3rem;
+    top: 200px;
+    right: 50px;
+    padding: 10px;
+    border-width: 10px;
+    border-radius: 30px;
+    border-color: red;
+    border-style: solid;
+
+}
+
+.box {
+    position: relative;
+    width: 50%;
+    margin: .5rem;
+    padding: 2rem;
+    color: #FFF;
+    font-size: .9rem;
+    font-weight: bold;
+    text-align: left;
+    border-width: 10px;
+    border-radius: 30px;
+    border-color: darkblue;
+    border-style: double;
+    background-color: #414141;
+}

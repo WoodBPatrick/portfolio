@@ -1,5 +1,5 @@
 Die[] die = new Die[17];
-int total,avgTotal,numRolls;
+int total,highestTotal;
 void setup()
 {
   size(400, 400);
@@ -25,10 +25,15 @@ void draw()
   //displaying the data
   textSize(20);
   fill(255);
-  text("Total="+total, 154, 350);
-  numRolls++;
-  avgTotal=total/numRolls;
-  text("Average Total="+avgTotal, 134, 380);
+  text("Total="+total, 154, 330);
+  if(total>highestTotal)
+    highestTotal=total;
+  if(highestTotal>99){
+    text("Congratulations! You Win!", 154, 380);
+  }
+  text("To win, you must achieve ", 55, 20);
+  text("higher than 99", 70, 40);
+  text("Highest Total="+highestTotal, 124, 350);
   total=0;
 }
 void mousePressed()

@@ -1,5 +1,6 @@
 Die[] die = new Die[17];
-int total,highestTotal;
+int total, highestTotal, startTime;
+boolean won;
 void setup()
 {
   size(400, 400);
@@ -9,16 +10,17 @@ void draw()
 {
   background(0);
   //creating all the die
-  for(int i=0;i<8;i++){
-    die[i] = new Die(i*50,i*50);
+  for (int i=0; i<8; i++) {
+    die[i] = new Die(i*50, i*50);
     die[i].show();
     total+=die[i].getRand();
   }
   int j=350;
   int g=0;
-  for(int i=0;i<8;i++){
-    die[i] = new Die(j,g);
-    j-=50;g+=50;
+  for (int i=0; i<8; i++) {
+    die[i] = new Die(j, g);
+    j-=50;
+    g+=50;
     die[i].show();
     total+=die[i].getRand();
   }
@@ -26,19 +28,29 @@ void draw()
   textSize(20);
   fill(255);
   text("Total="+total, 154, 330);
-  if(total>highestTotal)
+  if (total>highestTotal)
     highestTotal=total;
-  if(highestTotal>99){
-    text("Congratulations! You Win!", 154, 380);
-  }
-  text("To win, you must achieve ", 55, 20);
-  text("higher than 99", 70, 40);
-  text("Highest Total="+highestTotal, 124, 350);
+  text("To win, you must achieve ", 75, 20);
+  text("higher than 75", 120, 40);
+  text("Highest Total="+highestTotal, 115, 350);
   total=0;
+  if (highestTotal>75) {
+    won=true;
+    youWin();
+  }
 }
 void mousePressed()
 {
-  redraw();
+  if (!won)
+    redraw();
+}
+void youWin(){
+  clear();
+  background((int)(Math.random()*180)+20, (int)(Math.random()*180)+20, (int)(Math.random()*180)+20);
+  textSize(50);
+  text("Congratulations!", 0, 200);
+  textSize(60);
+  text("You Win!", 80, 260);
 }
 class Die //models one single dice cube
 {
@@ -71,7 +83,7 @@ class Die //models one single dice cube
     if (mousePressed || 1==1) {
       if (rand==2) {
         fill(255, 255, 255);
-        rect(posX, posY, 50, 50 ,7);
+        rect(posX, posY, 50, 50, 7);
         fill((int)(Math.random()*200), (int)(Math.random()*200), (int)(Math.random()*200));
         ellipse(posX+12, posY+12, 7, 7);
         ellipse(posX+37, posY+37, 7, 7);

@@ -3,7 +3,7 @@ body{
     height: 100px;
     background-color: darkgoldenrod;
     text-align: center;
-    font-family: Arial, Helvetica, san-serif;
+    font-family: "Arial, Helvetica, san-serif";
     font-size: 20px;
     margin: 1px;
 }
@@ -12,7 +12,6 @@ h1{
     position: relative;
     width: 50%;
     padding: .5rem;
-    font-weight: bold;
     border-radius: 30px;
     background-color: #414141;
 }
@@ -105,11 +104,42 @@ li {
     padding: 2rem;
     color: #FFF;
     font-size: .9rem;
-    font-weight: bold;
     text-align: left;
     border-width: 10px;
     border-radius: 30px;
     border-color: darkblue;
     border-style: double;
     background-color: #414141;
+}
+body {
+    color: rgb(0,0,0);
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+#content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+header {
+	
+}
+
+footer {
+	font-style: italic;
+	font-size: 90%;
+}
+
+.lightning{
+    position: absolute;
+    font-size: 90%;
+    color: blue;
+    left: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.dice{
+    
 }

@@ -1,19 +1,21 @@
 Bacteria[] b;
-int x;
-int y;
+float x;
+float y;
 void setup()   
 {     
   size(800, 800);
-  b = new Bacteria[10];
-  for (int i=0; i<10; i++) {
-    b[i] = new Bacteria(width/2, height/2);
+  b = new Bacteria[25];
+  for (int i=0; i<25; i++) {
+    b[i] = new Bacteria(-40, -40);
   }
 }   
 void draw()   
 {    
   background(0);
-  for (int i=0; i<10; i++) {
+  for (int i=0; i<25; i++) {
     b[i].move();
     b[i].show();
+    if (b[i].ifLost() == true)
+      b[i].lost();
   }
 }

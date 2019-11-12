@@ -123,10 +123,6 @@ body {
     margin-right: auto
 }
 
-header {
-	
-}
-
 footer {
 	font-style: italic;
 	font-size: 90%;
@@ -141,5 +137,22 @@ footer {
 }
 
 .dice{
-    
+    position: absolute;
+    font-size: 90%;
+    color: blue;
+    left: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.chemotaxis{
+    position: absolute;
+    font-size: 90%;
+    color: blue;
+    left: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.chemotaxisSketch{
+    position: relative;
+    left: 1px;
 }

@@ -7,7 +7,6 @@ var dotPos;//the blue dot
 var target=false;
 var total=0;
 var lost=false;
-var highScore=0;
 function setup()   
 {     
   createCanvas(800, 800);
@@ -96,7 +95,6 @@ class Bacteria
     textSize(20);
     fill(255);
     text("Total Points = "+total, 300, 20);
-    text("Highest Score = "+highScore, 305, 65)
   }
   show() {
     fill(Math.floor(Math.random()*200)+50, Math.floor(Math.random()*200)+50, 0);

@@ -3,8 +3,8 @@ class NormalParticle implements Particle{
   private int r, g, b;
   private int size;
   public NormalParticle(double x, double y){
-    this.x=x+Math.random()*20;
-    this.y=y+Math.random()*20;
+    this.x=x;
+    this.y=y;
     ang=(Math.PI/2)+Math.random()*20;
     speed=(Math.random()*1.5)+.3;
     r=(int)(Math.random()*150)+50;
@@ -16,10 +16,10 @@ class NormalParticle implements Particle{
     x+=Math.cos(ang)*speed;
     y+=Math.sin(ang)*speed;
     
-    if(x>width+size || x<0-size || y>height+size || y<0-size){
+    /*if(x>width+size || x<0-size || y>height+size || y<0-size){
       x=width/2;
       y=height/2;
-    }
+    }*/
   }
   public void show(){
     fill(r,g,b);

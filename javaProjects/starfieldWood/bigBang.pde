@@ -26,14 +26,12 @@ class bigBang implements Particle {
     sizeX-=ang*speed;
     sizeY-=ang*speed;
   }
-  public void restartShow(){
-    fill(0);
-    stroke(255);
-    ellipse(x, y, (int)sizeX, (int)sizeY);
-  }
   public void show() {
     fill(0);
     stroke(255);
     ellipse(x, y, (int)sizeX, (int)sizeY);
+  }
+  public double getSizeX(){
+    return sizeX;
   }
 }

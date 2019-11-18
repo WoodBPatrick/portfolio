@@ -21,6 +21,10 @@ class NormalParticle implements Particle{
       y=height/2;
     }*/
   }
+  public void restartBang(){
+    x-=Math.cos(ang)*speed;
+    y-=Math.sin(ang)*speed;
+  }
   public void show(){
     fill(r,g,b);
     stroke(r,g,b);
@@ -31,5 +35,8 @@ class NormalParticle implements Particle{
   }
   public int getY(){
     return (int)y;
+  }
+  public double getSizeX(){
+    return x;
   }
 }

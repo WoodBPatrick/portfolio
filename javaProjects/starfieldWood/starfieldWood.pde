@@ -1,6 +1,6 @@
 Particle[] particles = new Particle[800];
 bigBang restart;
-boolean click, started=false;
+boolean restarting=false;
 void setup() {
   size(800, 800);
   restart = new bigBang(width/2, height/2, 5000.0, 5000.0);
@@ -14,22 +14,18 @@ void setup() {
 void draw() {
   background(255);
   for (int i=0; i<particles.length; i++) {
-    if (click) {
+    if (particles[0].getSizeX() <= 1000) {
       particles[i].move();
       particles[i].show();
-      started=true;
-    } else if (started) {
-      restart.restartBang();
+    } else if (particles[0].getSizeX() > 1000) {
+      particles[i].restartBang();
+      particles[i].show();
     }
   }
-}
-void mouseReleased() {
-  if (!click)
-    click=true;
-  else
-    click=false;
 }
 interface Particle {
   void move();
   void show();
+  void restartBang();
+  double getSizeX();
 }

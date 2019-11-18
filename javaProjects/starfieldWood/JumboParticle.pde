@@ -21,6 +21,10 @@ class JumboParticle extends NormalParticle
       y=height/2;
     }*/
   }
+  public void restartBang(){
+    x-=Math.cos(ang)*speed;
+    y-=Math.sin(ang)*speed;
+  }
   public void show(){
     fill(r,g,b);
     stroke(r,g,b);

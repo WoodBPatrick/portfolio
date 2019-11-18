@@ -17,6 +17,13 @@ class OddballParticle implements Particle
       y=height/2;
     }*/
   }
+  public void restartBang(){
+    x-=Math.cos(ang)*speed;
+    y-=Math.sin(ang)*speed;
+  }
+  public double getSizeX(){
+    return x;
+  }
   public void show(){
     fill((int)(Math.random()*150)+50,(int)(Math.random()*150)+50,(int)(Math.random()*150)+50);
     stroke((int)(Math.random()*150)+50,(int)(Math.random()*150)+50,(int)(Math.random()*150)+50);

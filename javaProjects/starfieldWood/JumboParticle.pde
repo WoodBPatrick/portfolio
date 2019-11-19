@@ -1,8 +1,7 @@
 class JumboParticle extends NormalParticle
 {
-  double x, y, ang/*angle of the particles*/, speed;
+  double x, y, ang/*angle of the particles*/, speed, size, sizeGrowth;
   int r, g, b;
-  int size=20;
   public JumboParticle(int x,int y){
    super(x,y);
    this.x=x;
@@ -12,18 +11,22 @@ class JumboParticle extends NormalParticle
    r=(int)(Math.random()*150)+50;    
    g=(int)(Math.random()*150)+50;
    b=(int)(Math.random()*150)+50;
+   size=20;
+   sizeGrowth=(Math.random()*.1);
   }
   public void move(){
     x+=Math.cos(ang)*speed;
     y+=Math.sin(ang)*speed;
+    size+=sizeGrowth;
   }
   public void restartBang(){
     x-=Math.cos(ang)*speed;
     y-=Math.sin(ang)*speed;
+    size-=sizeGrowth;
   }
   public void show(){
     fill(r,g,b);
     stroke(r,g,b);
-    ellipse((int)x,(int)y,20,20);
+    ellipse((int)x,(int)y,(int)size,(int)size);
   }
 }

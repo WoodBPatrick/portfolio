@@ -34,4 +34,7 @@ class bigBang implements Particle {
   public double getSizeX(){
     return sizeX;
   }
+  public double getSizeY(){
+    return sizeY;
+  }
 }

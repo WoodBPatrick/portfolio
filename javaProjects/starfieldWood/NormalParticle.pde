@@ -1,7 +1,6 @@
 class NormalParticle implements Particle{
-  private double x, y, ang/*angle of the particles*/, speed;
+  private double x, y, ang/*angle of the particles*/, speed, sizeGrowth, size;
   private int r, g, b;
-  private int size;
   public NormalParticle(double x, double y){
     this.x=x;
     this.y=y;
@@ -10,20 +9,23 @@ class NormalParticle implements Particle{
     r=(int)(Math.random()*150)+50;
     g=(int)(Math.random()*150)+50;
     b=(int)(Math.random()*150)+50;
-    size=(int)(Math.random()*5)+1;
+    size=(Math.random()*5)+1;
+    sizeGrowth=(Math.random()*.03)-.01;
   }
   public void move(){
     x+=Math.cos(ang)*speed;
     y+=Math.sin(ang)*speed;
+    size+=sizeGrowth;
   }
   public void restartBang(){
     x-=Math.cos(ang)*speed;
     y-=Math.sin(ang)*speed;
+    size-=sizeGrowth;
   }
   public void show(){
     fill(r,g,b);
     stroke(r,g,b);
-    ellipse((int)x,(int)y,size,size);
+    ellipse((int)x,(int)y,(int)size,(int)size);
   }
   public int getX(){
     return (int)x;

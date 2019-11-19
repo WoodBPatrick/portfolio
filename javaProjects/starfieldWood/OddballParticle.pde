@@ -1,7 +1,6 @@
 class OddballParticle implements Particle
 {
-  double x, y, ang/*angle of the particles*/, speed;
-  int size;
+  double x, y, ang/*angle of the particles*/, speed, size, sizeGrowth;
   public OddballParticle(int x,int y){
     this.x=x;
     this.y=y;
@@ -12,10 +11,12 @@ class OddballParticle implements Particle
   public void move(){
     x+=Math.cos(ang)*speed;
     y+=Math.sin(ang)*speed;
+    size+=sizeGrowth;
   }
   public void restartBang(){
     x-=Math.cos(ang)*speed;
     y-=Math.sin(ang)*speed;
+    size+=sizeGrowth;
   }
   public double getSizeX(){
     return x;
@@ -23,6 +24,6 @@ class OddballParticle implements Particle
   public void show(){
     fill((int)(Math.random()*150)+50,(int)(Math.random()*150)+50,(int)(Math.random()*150)+50);
     stroke((int)(Math.random()*150)+50,(int)(Math.random()*150)+50,(int)(Math.random()*150)+50);
-    ellipse((int)x,(int)y,size+(int)(Math.random()*5),size+(int)(Math.random()*5));
+    ellipse((int)x,(int)y,(int)(size+(int)(Math.random()*5)),(int)(size+(int)(Math.random()*5)));
   }
 }

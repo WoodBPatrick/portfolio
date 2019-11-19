@@ -5,7 +5,8 @@ void setup() {
   particles[0] = new bigBang(width/2, height/2);
   particles[1] = new OddballParticle(width/2, height/2);
   particles[2] = new JumboParticle(width/2, height/2);
-  for (int i=3; i<particles.length; i++) {
+  particles[3] = new shootingStar();
+  for (int i=4; i<particles.length; i++) {
     particles[i] = new NormalParticle(width/2, height/2);
   }
 }

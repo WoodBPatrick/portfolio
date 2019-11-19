@@ -15,11 +15,6 @@ class NormalParticle implements Particle{
   public void move(){
     x+=Math.cos(ang)*speed;
     y+=Math.sin(ang)*speed;
-    
-    /*if(x>width+size || x<0-size || y>height+size || y<0-size){
-      x=width/2;
-      y=height/2;
-    }*/
   }
   public void restartBang(){
     x-=Math.cos(ang)*speed;

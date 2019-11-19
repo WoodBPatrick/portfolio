@@ -5,7 +5,7 @@ class bigBang implements Particle {
   public bigBang(int x, int y) {
     this.x=x;
     this.y=y;
-    speed=1.05;
+    speed=.7;
     ang=(Math.PI*2);
     sizeX=0;
     sizeY=0;
@@ -13,7 +13,7 @@ class bigBang implements Particle {
   public bigBang(int x, int y, double sizeX, double sizeY) {
     this.x=x;
     this.y=y;
-    speed=1.05;
+    speed=.7;
     ang=(Math.PI*2);
     this.sizeX=sizeX;
     this.sizeY=sizeY;

@@ -5,7 +5,7 @@ class NormalParticle implements Particle{
     this.x=x;
     this.y=y;
     ang=(Math.PI/2)+Math.random()*20;
-    speed=(Math.random()*1.5)+.3;
+    speed=(Math.random()*2)+.1;
     r=(int)(Math.random()*150)+50;
     g=(int)(Math.random()*150)+50;
     b=(int)(Math.random()*150)+50;

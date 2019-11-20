@@ -10,7 +10,7 @@ class NormalParticle implements Particle{
     g=(int)(Math.random()*150)+50;
     b=(int)(Math.random()*150)+50;
     size=(Math.random()*5)+1;
-    sizeGrowth=(Math.random()*.03)-.01;
+    sizeGrowth=(Math.random()*.05)-.02;
   }
   public void move(){
     x+=Math.cos(ang)*speed;
@@ -25,6 +25,8 @@ class NormalParticle implements Particle{
   public void show(){
     fill(r,g,b);
     stroke(r,g,b);
+    //fill((int)(Math.random()*150)+50,(int)(Math.random()*150)+50,(int)(Math.random()*150)+50);
+    //stroke((int)(Math.random()*150)+50,(int)(Math.random()*150)+50,(int)(Math.random()*150)+50);
     ellipse((int)x,(int)y,(int)size,(int)size);
   }
   public int getX(){

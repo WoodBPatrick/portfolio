@@ -7,6 +7,7 @@ class OddballParticle implements Particle
     ang=(Math.PI/2)+Math.random()*20;
     speed=.5;
     size=10;
+    sizeGrowth=(Math.random()*.05)-.02;
   }
   public void move(){
     x+=Math.cos(ang)*speed;
@@ -16,7 +17,7 @@ class OddballParticle implements Particle
   public void restartBang(){
     x-=Math.cos(ang)*speed;
     y-=Math.sin(ang)*speed;
-    size+=sizeGrowth;
+    size-=sizeGrowth;
   }
   public double getSizeX(){
     return x;

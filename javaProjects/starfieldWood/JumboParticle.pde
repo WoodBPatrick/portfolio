@@ -27,6 +27,8 @@ class JumboParticle extends NormalParticle
   public void show(){
     fill(r,g,b);
     stroke(r,g,b);
+    //fill((int)(Math.random()*150)+50,(int)(Math.random()*150)+50,(int)(Math.random()*150)+50);
+    //stroke((int)(Math.random()*150)+50,(int)(Math.random()*150)+50,(int)(Math.random()*150)+50);
     ellipse((int)x,(int)y,(int)size,(int)size);
   }
 }

@@ -1,4 +1,3 @@
-
 body{
     height: 100px;
     background-color: darkgoldenrod;
@@ -128,38 +127,127 @@ footer {
 	font-size: 90%;
 }
 
+.lightningURL{
+    position: absolute;
+    font-size: 90%;
+    color: blue;
+    left: 20px;
+    font-family: "Open Sans", sans-serif;
+}
 .lightning{
+   flex-basis: 20%;
+    height: 10%;
+    margin: auto;
+    padding: 4px;
+    left:10px;
     position: absolute;
-    font-size: 90%;
-    color: blue;
-    left: 20px;
-    font-family: "Open Sans", sans-serif;
 }
-
-.dice{
-    position: absolute;
-    font-size: 90%;
-    color: blue;
-    left: 20px;
-    font-family: "Open Sans", sans-serif;
-}
-
-.chemotaxis{
-    position: absolute;
-    font-size: 90%;
-    color: blue;
-    left: 20px;
-    font-family: "Open Sans", sans-serif;
-}
-
-.chemotaxisSketch{
+.lightningChallenges {
+    flex-basis: 40%;
     position: relative;
-    left: 1px;
+    width: 50%;
+    margin: .5rem;
+    padding: 2rem;
+    color: #FFF;
+    font-size: .9rem;
+    text-align: left;
+    border-width: 10px;
+    border-radius: 30px;
+    border-color: darkblue;
+    border-style: double;
+    background-color: #414141;
+    left:610px;
+}
+.diceURL{
+    position: absolute;
+    font-size: 90%;
+    color: blue;
+    left: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+.dice{
+   flex-basis: 20%;
+    height: 10%;
+    margin: auto;
+    padding: 4px;
+    left:10px;
+    position: absolute;
+}
+.diceChallenges {
+    flex-basis: 40%;
+    position: relative;
+    width: 50%;
+    margin: .5rem;
+    padding: 2rem;
+    color: #FFF;
+    font-size: .9rem;
+    text-align: left;
+    border-width: 10px;
+    border-radius: 30px;
+    border-color: darkblue;
+    border-style: double;
+    background-color: #414141;
+    left:410px;
+}
+.chemotaxisURL{
+    position: absolute;
+    font-size: 90%;
+    color: blue;
+    left: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+.chemo{
+   flex-basis: 20%;
+    height: 10%;
+    margin: auto;
+    padding: 4px;
+    left:10px;
+    position: absolute;
+}
+.chemotaxisChallenges {
+    flex-basis: 40%;
+    position: relative;
+    width: 40%;
+    margin: .5rem;
+    padding: 2rem;
+    color: #FFF;
+    font-size: .9rem;
+    text-align: left;
+    border-width: 10px;
+    border-radius: 30px;
+    border-color: darkblue;
+    border-style: double;
+    background-color: #414141;
+    left:810px;
+}
+.starfieldURL{
+    position: absolute;
+    font-size: 90%;
+    color: blue;
+    left: 20px;
+    font-family: "Open Sans", sans-serif;
 }
 .starfield{
+   flex-basis: 20%;
+    height: 10%;
+    margin: auto;
+    padding: 4px;
+    left:10px;
     position: absolute;
-    font-size: 90%;
-    color: blue;
-    left: 20px;
-    font-family: "Open Sans", sans-serif;
+}
+.starChallenges {
+    flex-basis: 40%;
+    position: relative;
+    width: 50%;
+    margin: .5rem;
+    padding: 2rem;
+    color: #FFF;
+    font-size: .9rem;
+    text-align: left;
+    border-width: 10px;
+    border-radius: 30px;
+    border-color: darkblue;
+    border-style: double;
+    background-color: #414141;
+    left:610px;
 }

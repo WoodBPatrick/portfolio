@@ -8,7 +8,7 @@
 		<title>Title</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../../css/styles.css">
-		
+		<script type="text/javascript" src="processing_js/processing_js.pde"></script>
 </head>
 <body bgcolor="red">
     <header>
@@ -21,10 +21,10 @@
             <a href="../../pages/aboutMe.html">About me</a>
         </div>
     </header>
-    <script src="../../libraries/p5.js"></script>
-    <script src="../../addons/p5.dom.js"></script>
-    <script src="../../addons/p5.sound.js"></script>
-    <script id="lightning" src="sketch.js"></script>
-
+    <div class ="lightning" id="lightning">
+        <script src="../../libraries/p5.js"></script>
+        <script id="lightning" src="sketch.js"></script>
+    </div>
+    <div class="lightningChallenges">The most difficult part about this project had to have been the problem of creating two lightning bolts cross paths. The stickman was not difficult to create, and the positioning of the start points for the lightning was simple copy and paste from the end points of the stick arms. However, I the lightning tended go to the same places as the other lightning bolt. The Math.random() method seemed to make little sense, though, I assume to a computers mind, it made perfect sense. I had to fix it through trial and error, and eventually got the lightning bolts to cross paths consistently.</div>
     </body>
 </html>

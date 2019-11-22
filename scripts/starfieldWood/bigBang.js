@@ -1,4 +1,4 @@
-class bigBang {
+class BigBang {
   constructor(x, y) {
     this.x=x;
     this.y=y;

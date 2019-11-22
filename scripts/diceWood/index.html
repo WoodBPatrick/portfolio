@@ -8,7 +8,7 @@
 		<title>Title</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../../css/styles.css">
-		
+		<script type="text/javascript" src="processing_js/processing_js.pde"></script>
 </head>
 <body bgcolor="red">
     <header>
@@ -21,10 +21,11 @@
             <a href="../../pages/aboutMe.html">About me</a>
         </div>
     </header>
-    <script src="../../libraries/p5.js"></script>
-    <script src="../../addons/p5.dom.js"></script>
-    <script src="../../addons/p5.sound.js"></script>
-    <script id="dice" src="diceWood.js"></script>
+    <div class ="dice" id="dice">
+        <script src="../../libraries/p5.js"></script>
+        <script id="dice" src="diceWood.js"></script>
+    </div>
+    <div class="diceChallenges">The most difficult part about this project had to have been the game aspect of program. It took me awhile to get all the required variables to work in sync with each other, and reset after you have won or lost. There was a lot of different variables that all had to be accounted for, including the current total rolled, highest total rolled, num of mouse clicks, current money, and money earned; also of course the number you have to score higher than to earn $20 dollars/$1,000,000 dollars. It just took awhile toget all of these variables to work/displayed, and that had to have been the hardest part of the project.</div>
 
     </body>
 </html>

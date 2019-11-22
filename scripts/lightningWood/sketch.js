@@ -18,7 +18,8 @@ function startingStickMan(){
   //eyes
   ellipse(294,445,2,2);ellipse(306,445,2,2);}
 function setup(){
-    createCanvas(600,600);
+    var canvas = createCanvas(600, 600);
+  canvas.parent('lightning');
     strokeWeight(3);
 }
 function draw(){
@@ -56,4 +57,3 @@ function reset(){
   stroke(255,255,255);fill(255,255,255);
   startingStickMan();
 }
-

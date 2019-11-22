@@ -4,7 +4,8 @@ var total=0, highestTotal=0, pressedCount=0, money=100, moneyWon=0;
 var gameOver=false;
 function setup()
 {
-  createCanvas(400, 400);
+  var canvas = createCanvas(400, 400);
+  canvas.parent('dice');
   noLoop();
 }
 function draw()

@@ -1,5 +1,5 @@
 var particles;
-var restarting=false;
+var restarting,stopped;
 function setup() {
   var canvas = createCanvas(600, 600);
   canvas.parent('starfield');
@@ -15,7 +15,8 @@ function draw() {
   background(255);
   if(!restarting){
       for(var i=0;i<particles.length;i++){
-          particles[i].move();
+          if(!stopped)
+            particles[i].move();
           particles[i].show();
       }
       if(particles[0].getSizeX()>2000)
@@ -23,10 +24,18 @@ function draw() {
   }
     else if(restarting){
         for(var i=0;i<particles.length;i++){
-          particles[i].restartBang();
+          if(!stopped)
+            particles[i].restartBang();
           particles[i].show();
         }
         if(particles[0].getSizeX()<0)
             restarting=false;
     }
+}
+function mouseReleased(){
+   if(mouseX>=0 && mouseX<=width && mouseY>=0 && mouseY<=height) 
+        if(!stopped)
+            stopped=true;
+        else
+            stopped=false;
 }

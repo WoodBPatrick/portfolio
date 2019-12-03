@@ -1,7 +1,13 @@
 //By Brian W and Yousif A
+ 
+import processing.sound.*;
+SoundFile boom1;
+SoundFile boom2;
+SoundFile boom3;
 PImage santaimg;
 PImage presentimg;
 PImage explosionimg;
+SoundFile[] kaboom = new SoundFile[3];
 boolean[] showExpl = new boolean[3];
 Present[] present = new Present[3];
 snowInterface[] flakes = new Snow[300];
@@ -10,6 +16,9 @@ Moon moon;
 Santa santa;
 void setup() {
   size(1000, 1000);
+  for(int x = 0; x< 3; x++){
+  kaboom[x] = new SoundFile(this,"Grenade-SoundBible.com-2124844747.mp3");
+  }
   santaimg = loadImage("santa_sleigh_PNG55.png");
   presentimg = loadImage("gift.png");
   explosionimg = loadImage("explosion-fire-fire.jpg");
@@ -57,20 +66,28 @@ void draw() {
     houses[0].show=false;
     if (showExpl[0])
       image(explosionimg, houses[0].x-50, 500);
+      kaboom[0].play();
   }
   if (present[1].y>1000) {
     houses[1].show=false;
     if (showExpl[1])
       image(explosionimg, houses[1].x-50, 500);
+      kaboom[0].stop();
+      kaboom[1].play();
   }
   if (present[2].y>1000) {
     houses[2].show=false;
     if (showExpl[2])
       image(explosionimg, houses[2].x-50, 500);
+      kaboom[1].stop();
+      kaboom[2].play();
   }
   for (int i=0; i<present.length; i++) {
     if (present[i].y>1500)
       showExpl[i]=false;
+      
+      if(present[2].y>1500)
+      kaboom[2].stop();
   }
   //shows snowflakes
   for (int i = 0; i<flakes.length; i++ ) {
@@ -82,6 +99,11 @@ void draw() {
       present[i].y=170;
       showExpl[i]=true;
       houses[i].show=true;
+    }
+    for(int x = 0; x< 3; x++){
+    println("boom # " +x+""+kaboom[x].isPlaying());
+      
+    
     }
 }
 interface snowInterface {

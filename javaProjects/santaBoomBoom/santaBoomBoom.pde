@@ -1,5 +1,4 @@
 //By Brian W and Yousif A
- 
 import processing.sound.*;
 SoundFile boom1;
 SoundFile boom2;
@@ -21,10 +20,10 @@ void setup() {
   }
   santaimg = loadImage("santa_sleigh_PNG55.png");
   presentimg = loadImage("gift.png");
-  explosionimg = loadImage("explosion-fire-fire.jpg");
+  explosionimg = loadImage("2cd43b_833e9af8129a4513ab37d57474e41ec1_mv2_d_3072_2044_s_2.png");
   presentimg.resize(40, 40);
   santaimg.resize(400, 350);
-  explosionimg.resize(300, 500);
+  explosionimg.resize(500, 600);
   santa = new Santa();
   moon = new Moon();
   present[0] = new Present(183);
@@ -41,7 +40,7 @@ void setup() {
 }
 void draw() {
   background(5);
-  //shows santa
+  //shows santa/moon
   moon.move();
   moon.show();
   santa.move();
@@ -65,30 +64,29 @@ void draw() {
   if (present[0].y>1000) {
     houses[0].show=false;
     if (showExpl[0])
-      image(explosionimg, houses[0].x-50, 500);
+      image(explosionimg, houses[0].x-100, 488);
       kaboom[0].play();
   }
   if (present[1].y>1000) {
     houses[1].show=false;
     if (showExpl[1])
-      image(explosionimg, houses[1].x-50, 500);
+      image(explosionimg, houses[1].x-100, 488);
       kaboom[0].stop();
       kaboom[1].play();
   }
   if (present[2].y>1000) {
     houses[2].show=false;
     if (showExpl[2])
-      image(explosionimg, houses[2].x-50, 500);
+      image(explosionimg, houses[2].x-100, 488);
       kaboom[1].stop();
       kaboom[2].play();
   }
   for (int i=0; i<present.length; i++) {
     if (present[i].y>1500)
       showExpl[i]=false;
-      
-      if(present[2].y>1500)
-      kaboom[2].stop();
   }
+  if(present[2].y>1500)
+      kaboom[2].stop();
   //shows snowflakes
   for (int i = 0; i<flakes.length; i++ ) {
     flakes[i].move();
@@ -102,8 +100,6 @@ void draw() {
     }
     for(int x = 0; x< 3; x++){
     println("boom # " +x+""+kaboom[x].isPlaying());
-      
-    
     }
 }
 interface snowInterface {

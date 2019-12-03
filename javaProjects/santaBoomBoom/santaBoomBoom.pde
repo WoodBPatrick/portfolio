@@ -1,8 +1,6 @@
 //By Brian W and Yousif A
 import processing.sound.*;
-SoundFile boom1;
-SoundFile boom2;
-SoundFile boom3;
+SoundFile boom1,boom2,boom3;
 PImage santaimg;
 PImage presentimg;
 PImage explosionimg;

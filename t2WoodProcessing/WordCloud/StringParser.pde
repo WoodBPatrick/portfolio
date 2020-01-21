@@ -14,7 +14,8 @@ public class StringParser {
   }
 
   public int getVowels() {
-    String[] vowels=words.split("[^aeiou]+");
+    String[] vowels = words.split("[\\W+]");
+    vowels=words.split("[^aeiou]+");
     //https://regexr.com/4qrsh
     int count=0;
     while (count<vowels.length) {
@@ -41,7 +42,7 @@ public class StringParser {
     return syllables.length;
   }
   public float getFleschScore() {
-    return 206.835-1.015*(getCount()/getSentences())-84.6*(getSyll()/getCount());
+    return 206.835-(1.015*(getCount()/getSentences()))-(84.6*(getSyll()/getCount()));
   }
   public String getFleschGrade() {
     if (getFleschScore()>=90.00)

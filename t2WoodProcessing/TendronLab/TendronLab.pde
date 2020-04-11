@@ -1,4 +1,3 @@
-Ellipse e = new Ellipse();
 DisplayText t1 = new DisplayText(400, 50, "The white circle at maximum size is the longest a tendril can be");
 void setup() {
   size(800, 800);  

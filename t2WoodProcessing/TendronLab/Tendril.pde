@@ -11,9 +11,9 @@ class Tendril {
   }
   public void show() {
     if (myNumSegments>40)
-      stroke(100, 0, 0);
+      stroke(0, 0, 255);
     else if (myNumSegments>20)
-      stroke(0, 100, 0);
+      stroke(0, 0, 200);
     else
       stroke(0, 0, 100);
     double startX=myX, startY=myY;

@@ -2,7 +2,6 @@ class Tendril {
   private int SEG_LENGTH=4; //length of each segment in the tendril
   private int myNumSegments;
   private double myAngle, myX, myY;
-  private Cluster c;
   public Tendril(int numberSegments, double theta, double x, double y) {
     myNumSegments=numberSegments;
     myX=x;
@@ -13,9 +12,10 @@ class Tendril {
     if (myNumSegments>40)
       stroke(0, 0, 255);
     else if (myNumSegments>20)
+      stroke(0, 0, 230);
+    else if(myNumSegments<=20){
       stroke(0, 0, 200);
-    else
-      stroke(0, 0, 100);
+    }
     double startX=myX, startY=myY;
     for (int i=0; i<myNumSegments; i++) {
       myAngle+=(Math.random()*.4)-.2;
